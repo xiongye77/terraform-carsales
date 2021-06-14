@@ -1,5 +1,5 @@
 variable "region" {
-     default = "ap-south-1"
+     default = "ap-southeast-2"
 }
 
 variable "vpcCIDRblock" {
@@ -36,7 +36,7 @@ variable "min_spot_instances" {
 }
 
 variable "spot_bid_price"  {
-    default = "0.016"
+    default = "0.03"
 
 }
 #please refer  https://aws.amazon.com/ec2/spot/pricing/  

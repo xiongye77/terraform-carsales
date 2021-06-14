@@ -1,0 +1,327 @@
+Acquiring state lock. This may take a few moments...
+[0m[1mdata.aws_ami.aws_optimized_ecs: Refreshing state...[0m
+[0m[1mdata.aws_caller_identity.current: Refreshing state...[0m
+[0m[1mdata.aws_ami.amazon-linux-2-bastion: Refreshing state...[0m
+[0m[1mtls_private_key.carsales_ecs_key: Creating...[0m[0m
+[0m[1mrandom_string.password: Creating...[0m[0m
+[0m[1mrandom_string.password: Creation complete after 0s [id=TCYwYxu3rtEhaq4y][0m[0m
+[0m[1maws_efs_file_system.efs_volume: Creating...[0m[0m
+[0m[1maws_ssm_parameter.rdspassword: Creating...[0m[0m
+[0m[1maws_eip.carsales-nat2: Creating...[0m[0m
+[0m[1maws_iam_role.ecs-task-execution-role: Creating...[0m[0m
+[0m[1maws_ecs_cluster.my_cluster: Creating...[0m[0m
+[0m[1maws_vpc.carsales_vpc: Creating...[0m[0m
+[0m[1maws_eip.carsales-nat1: Creating...[0m[0m
+[0m[1maws_iam_role.ecs-service-role: Creating...[0m[0m
+[0m[1maws_iam_role.ecs-demo-task-role: Creating...[0m[0m
+[0m[1maws_eip.carsales-nat1: Creation complete after 2s [id=eipalloc-0f1d0716dc6ad2364][0m[0m
+[0m[1maws_iam_role.ecs-host-role: Creating...[0m[0m
+[0m[1maws_eip.carsales-nat2: Creation complete after 2s [id=eipalloc-086547934dc66ac44][0m[0m
+[0m[1maws_secretsmanager_secret.RDS-postgres-username: Creating...[0m[0m
+[0m[1mtls_private_key.carsales_ecs_key: Creation complete after 4s [id=bbeb3dc00448ec8413e0d846b37feff0cf7d3c0d][0m[0m
+[0m[1mlocal_file.carsales_ecs_private_key: Creating...[0m[0m
+[0m[1mlocal_file.carsales_ecs_private_key: Creation complete after 0s [id=ec0058115e4d057336b2cc0e7b1d18055cd20af0][0m[0m
+[0m[1maws_key_pair.carsales_ecs_public_key: Creating...[0m[0m
+[0m[1maws_ssm_parameter.rdspassword: Creation complete after 3s [id=/production/myapp/rds-password][0m[0m
+[0m[1maws_iam_role.ecs-task-execution-role: Creation complete after 3s [id=ecs-task-execution-role][0m[0m
+[0m[1maws_iam_role_policy.ecs-task-execution-role: Creating...[0m[0m
+[0m[1maws_iam_role.ecs-service-role: Creation complete after 3s [id=ecs_service_role_prod][0m[0m
+[0m[1maws_iam_role_policy.ecs-service-role-policy: Creating...[0m[0m
+[0m[1maws_iam_role.ecs-demo-task-role: Creation complete after 3s [id=ecs-demo-task-role][0m[0m
+[0m[1maws_key_pair.carsales_ecs_public_key: Creation complete after 1s [id=carsales_ecs_public_key][0m[0m
+[0m[1maws_secretsmanager_secret.RDS-postgres-username: Creation complete after 2s [id=arn:aws:secretsmanager:ap-southeast-2:207880003428:secret:carsales-rds-postgres-admin-OkyHjj][0m[0m
+[0m[1maws_secretsmanager_secret_version.secretmanager-version: Creating...[0m[0m
+[0m[1maws_iam_role.ecs-host-role: Creation complete after 3s [id=ecs_host_role_prod][0m[0m
+[0m[1maws_iam_role_policy.ecs-instance-role-policy: Creating...[0m[0m
+[0m[1maws_iam_instance_profile.ecs: Creating...[0m[0m
+[0m[1maws_iam_role_policy.ecs-task-execution-role: Creation complete after 2s [id=ecs-task-execution-role:ecs-task-execution-role][0m[0m
+[0m[1maws_iam_role_policy.ecs-service-role-policy: Creation complete after 2s [id=ecs_service_role_prod:ecs_service_role_policy][0m[0m
+[0m[1maws_secretsmanager_secret_version.secretmanager-version: Creation complete after 1s [id=arn:aws:secretsmanager:ap-southeast-2:207880003428:secret:carsales-rds-postgres-admin-OkyHjj|B7EB23FE-93FB-4472-9493-822EE701A7CC][0m[0m
+[0m[1mdata.aws_secretsmanager_secret_version.creds: Reading...[0m[0m
+[0m[1mdata.aws_secretsmanager_secret_version.creds: Read complete after 1s [id=arn:aws:secretsmanager:ap-southeast-2:207880003428:secret:carsales-rds-postgres-admin-OkyHjj|AWSCURRENT][0m[0m
+[0m[1maws_iam_role_policy.ecs-instance-role-policy: Creation complete after 1s [id=ecs_host_role_prod:ecs_instance_role_policy][0m[0m
+[0m[1maws_iam_instance_profile.ecs: Creation complete after 2s [id=ecs_instance_profile_prod][0m[0m
+[0m[1maws_efs_file_system.efs_volume: Creation complete after 9s [id=fs-dc6c5ee4][0m[0m
+[0m[1maws_efs_access_point.efs_access_point: Creating...[0m[0m
+[0m[1maws_ecs_task_definition.carsales2: Creating...[0m[0m
+[0m[1maws_ecs_task_definition.carsales1: Creating...[0m[0m
+[0m[1maws_ecs_cluster.my_cluster: Still creating... [10s elapsed][0m[0m
+[0m[1maws_vpc.carsales_vpc: Still creating... [10s elapsed][0m[0m
+[0m[1maws_ecs_task_definition.carsales2: Creation complete after 1s [id=carsales2][0m[0m
+[0m[1maws_ecs_task_definition.carsales1: Creation complete after 1s [id=carsales1][0m[0m
+[0m[1maws_efs_access_point.efs_access_point: Creation complete after 3s [id=fsap-0a295b880406f30f4][0m[0m
+[0m[1maws_ecs_cluster.my_cluster: Creation complete after 12s [id=arn:aws:ecs:ap-southeast-2:207880003428:cluster/carsales-cluster][0m[0m
+[0m[1maws_vpc.carsales_vpc: Creation complete after 19s [id=vpc-07d49e1e72c3add24][0m[0m
+[0m[1maws_security_group.carsales_bastion_sg: Creating...[0m[0m
+[0m[1maws_internet_gateway.carsales-igw: Creating...[0m[0m
+[0m[1maws_subnet.carsales-private-1a: Creating...[0m[0m
+[0m[1maws_subnet.carsales-private-1b: Creating...[0m[0m
+[0m[1maws_subnet.carsales-public-1b: Creating...[0m[0m
+[0m[1maws_lb_target_group.carsales-back-end-tg-2: Creating...[0m[0m
+[0m[1maws_security_group.carsales_alb_sg: Creating...[0m[0m
+[0m[1maws_subnet.carsales-public-1a: Creating...[0m[0m
+[0m[1maws_lb_target_group.carsales-back-end-tg-1: Creating...[0m[0m
+[0m[1maws_subnet.carsales-private-1b: Creation complete after 2s [id=subnet-035f1df959376f9f4][0m[0m
+[0m[1maws_subnet.carsales-private-1a: Creation complete after 2s [id=subnet-0bd2b35de67bd4cd3][0m[0m
+[0m[1maws_db_subnet_group.carsales-db-subnet: Creating...[0m[0m
+[0m[1maws_internet_gateway.carsales-igw: Creation complete after 3s [id=igw-05e7f7c112756d818][0m[0m
+[0m[1maws_route_table.carsales-public: Creating...[0m[0m
+[0m[1maws_lb_target_group.carsales-back-end-tg-1: Creation complete after 4s [id=arn:aws:elasticloadbalancing:ap-southeast-2:207880003428:targetgroup/carsales-back-end-tg-1/26096433e9776eb9][0m[0m
+[0m[1maws_ecs_service.carsales-dealer-service: Creating...[0m[0m
+[0m[1maws_lb_target_group.carsales-back-end-tg-2: Creation complete after 4s [id=arn:aws:elasticloadbalancing:ap-southeast-2:207880003428:targetgroup/carsales-back-end-tg-2/5014bedd99bb96a7][0m[0m
+[0m[1maws_ecs_service.carsales-commerical-service: Creating...[0m[0m
+[0m[1maws_db_subnet_group.carsales-db-subnet: Creation complete after 3s [id=carsales-database-subnet-group][0m[0m
+[0m[1maws_security_group.carsales_alb_sg: Creation complete after 6s [id=sg-0d55388aa6f0fba6d][0m[0m
+[0m[1maws_security_group.carsales_bastion_sg: Creation complete after 6s [id=sg-0d4cb46172702711e][0m[0m
+[0m[1maws_security_group.ecs: Creating...[0m[0m
+[0m[1maws_route_table.carsales-public: Creation complete after 3s [id=rtb-0d61e5b3e231c766e][0m[0m
+[0m[1maws_subnet.carsales-public-1b: Still creating... [10s elapsed][0m[0m
+[0m[1maws_subnet.carsales-public-1a: Still creating... [10s elapsed][0m[0m
+[0m[1maws_security_group.ecs: Creation complete after 6s [id=sg-009d13b74de6d480c][0m[0m
+[0m[1maws_security_group.carsales_efs_sg: Creating...[0m[0m
+[0m[1maws_launch_configuration.ecs: Creating...[0m[0m
+[0m[1maws_security_group.carsales_db_sg: Creating...[0m[0m
+[0m[1maws_subnet.carsales-public-1b: Creation complete after 13s [id=subnet-092ae82ec9978934e][0m[0m
+[0m[1maws_route_table_association.carsales-public-1b-association: Creating...[0m[0m
+[0m[1maws_nat_gateway.carsales-nat-gateway-1b: Creating...[0m[0m
+[0m[1maws_subnet.carsales-public-1a: Creation complete after 13s [id=subnet-03eb415755340f4f5][0m[0m
+[0m[1maws_nat_gateway.carsales-nat-gateway-1a: Creating...[0m[0m
+[0m[1maws_instance.carsales_bastion_host-1a: Creating...[0m[0m
+[0m[1maws_lb.carsales_alb: Creating...[0m[0m
+[0m[1maws_launch_configuration.ecs: Creation complete after 2s [id=carsales-cluster][0m[0m
+[0m[1maws_route_table_association.carsales-public-1a-association: Creating...[0m[0m
+[0m[1maws_route_table_association.carsales-public-1b-association: Creation complete after 1s [id=rtbassoc-0418a01a29de1ca8f][0m[0m
+[0m[1maws_autoscaling_group.ecs-cluster: Creating...[0m[0m
+[0m[1maws_ecs_service.carsales-dealer-service: Still creating... [10s elapsed][0m[0m
+[0m[1maws_ecs_service.carsales-commerical-service: Still creating... [10s elapsed][0m[0m
+[0m[1maws_route_table_association.carsales-public-1a-association: Creation complete after 0s [id=rtbassoc-010f280fc0e8b941f][0m[0m
+[0m[1maws_security_group.carsales_efs_sg: Creation complete after 5s [id=sg-0423ffc66be2d79d5][0m[0m
+[0m[1maws_efs_mount_target.ecs_temp_space_az0: Creating...[0m[0m
+[0m[1maws_efs_mount_target.ecs_temp_space_az1: Creating...[0m[0m
+[0m[1maws_security_group.carsales_db_sg: Creation complete after 5s [id=sg-0b71b5a1ceb87538d][0m[0m
+[0m[1maws_db_instance.carsales-db: Creating...[0m[0m
+[0m[1maws_nat_gateway.carsales-nat-gateway-1b: Still creating... [10s elapsed][0m[0m
+[0m[1maws_nat_gateway.carsales-nat-gateway-1a: Still creating... [10s elapsed][0m[0m
+[0m[1maws_instance.carsales_bastion_host-1a: Still creating... [10s elapsed][0m[0m
+[0m[1maws_lb.carsales_alb: Still creating... [10s elapsed][0m[0m
+[0m[1maws_autoscaling_group.ecs-cluster: Still creating... [10s elapsed][0m[0m
+[0m[1maws_ecs_service.carsales-dealer-service: Still creating... [20s elapsed][0m[0m
+[0m[1maws_ecs_service.carsales-commerical-service: Still creating... [20s elapsed][0m[0m
+[0m[1maws_efs_mount_target.ecs_temp_space_az0: Still creating... [10s elapsed][0m[0m
+[0m[1maws_efs_mount_target.ecs_temp_space_az1: Still creating... [10s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [10s elapsed][0m[0m
+[0m[1maws_nat_gateway.carsales-nat-gateway-1b: Still creating... [20s elapsed][0m[0m
+[0m[1maws_nat_gateway.carsales-nat-gateway-1a: Still creating... [20s elapsed][0m[0m
+[0m[1maws_instance.carsales_bastion_host-1a: Still creating... [20s elapsed][0m[0m
+[0m[1maws_lb.carsales_alb: Still creating... [20s elapsed][0m[0m
+[0m[1maws_autoscaling_group.ecs-cluster: Still creating... [20s elapsed][0m[0m
+[0m[1maws_ecs_service.carsales-dealer-service: Still creating... [30s elapsed][0m[0m
+[0m[1maws_ecs_service.carsales-commerical-service: Still creating... [30s elapsed][0m[0m
+[0m[1maws_efs_mount_target.ecs_temp_space_az0: Still creating... [20s elapsed][0m[0m
+[0m[1maws_efs_mount_target.ecs_temp_space_az1: Still creating... [20s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [20s elapsed][0m[0m
+[0m[1maws_instance.carsales_bastion_host-1a: Creation complete after 28s [id=i-0f0ea1ae1bb84ab0f][0m[0m
+[0m[1maws_nat_gateway.carsales-nat-gateway-1b: Still creating... [30s elapsed][0m[0m
+[0m[1maws_nat_gateway.carsales-nat-gateway-1a: Still creating... [30s elapsed][0m[0m
+[0m[1maws_lb.carsales_alb: Still creating... [30s elapsed][0m[0m
+[0m[1maws_autoscaling_group.ecs-cluster: Still creating... [30s elapsed][0m[0m
+[0m[1maws_ecs_service.carsales-dealer-service: Still creating... [40s elapsed][0m[0m
+[0m[1maws_ecs_service.carsales-commerical-service: Still creating... [40s elapsed][0m[0m
+[0m[1maws_efs_mount_target.ecs_temp_space_az0: Still creating... [30s elapsed][0m[0m
+[0m[1maws_efs_mount_target.ecs_temp_space_az1: Still creating... [30s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [30s elapsed][0m[0m
+[0m[1maws_nat_gateway.carsales-nat-gateway-1b: Still creating... [40s elapsed][0m[0m
+[0m[1maws_nat_gateway.carsales-nat-gateway-1a: Still creating... [40s elapsed][0m[0m
+[0m[1maws_lb.carsales_alb: Still creating... [40s elapsed][0m[0m
+[0m[1maws_autoscaling_group.ecs-cluster: Still creating... [40s elapsed][0m[0m
+[0m[1maws_ecs_service.carsales-dealer-service: Still creating... [50s elapsed][0m[0m
+[0m[1maws_ecs_service.carsales-commerical-service: Still creating... [50s elapsed][0m[0m
+[0m[1maws_autoscaling_group.ecs-cluster: Creation complete after 43s [id=carsales_auto_scaling_group][0m[0m
+[0m[1maws_autoscaling_policy.ecs-cluster-scale-in: Creating...[0m[0m
+[0m[1maws_autoscaling_policy.ecs-cluster-scale-out: Creating...[0m[0m
+[0m[1maws_efs_mount_target.ecs_temp_space_az0: Still creating... [40s elapsed][0m[0m
+[0m[1maws_efs_mount_target.ecs_temp_space_az1: Still creating... [40s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [40s elapsed][0m[0m
+[0m[1maws_autoscaling_policy.ecs-cluster-scale-out: Creation complete after 1s [id=ecs-cluster-scale-out][0m[0m
+[0m[1maws_cloudwatch_metric_alarm.memory-high: Creating...[0m[0m
+[0m[1maws_autoscaling_policy.ecs-cluster-scale-in: Creation complete after 1s [id=ecs-cluster-scale-in][0m[0m
+[0m[1maws_cloudwatch_metric_alarm.memory-low: Creating...[0m[0m
+[0m[1maws_cloudwatch_metric_alarm.memory-high: Creation complete after 2s [id=mem-util-high-agents][0m[0m
+[0m[1maws_cloudwatch_metric_alarm.memory-low: Creation complete after 2s [id=mem-util-low-agents][0m[0m
+[0m[1maws_nat_gateway.carsales-nat-gateway-1b: Still creating... [50s elapsed][0m[0m
+[0m[1maws_nat_gateway.carsales-nat-gateway-1a: Still creating... [50s elapsed][0m[0m
+[0m[1maws_lb.carsales_alb: Still creating... [50s elapsed][0m[0m
+[0m[1maws_ecs_service.carsales-dealer-service: Still creating... [1m0s elapsed][0m[0m
+[0m[1maws_ecs_service.carsales-commerical-service: Still creating... [1m0s elapsed][0m[0m
+[0m[1maws_efs_mount_target.ecs_temp_space_az0: Still creating... [50s elapsed][0m[0m
+[0m[1maws_efs_mount_target.ecs_temp_space_az1: Still creating... [50s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [50s elapsed][0m[0m
+[0m[1maws_nat_gateway.carsales-nat-gateway-1b: Still creating... [1m0s elapsed][0m[0m
+[0m[1maws_nat_gateway.carsales-nat-gateway-1a: Still creating... [1m0s elapsed][0m[0m
+[0m[1maws_lb.carsales_alb: Still creating... [1m0s elapsed][0m[0m
+[0m[1maws_ecs_service.carsales-dealer-service: Still creating... [1m10s elapsed][0m[0m
+[0m[1maws_ecs_service.carsales-commerical-service: Still creating... [1m10s elapsed][0m[0m
+[0m[1maws_efs_mount_target.ecs_temp_space_az0: Still creating... [1m0s elapsed][0m[0m
+[0m[1maws_efs_mount_target.ecs_temp_space_az1: Still creating... [1m0s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [1m0s elapsed][0m[0m
+[0m[1maws_nat_gateway.carsales-nat-gateway-1b: Still creating... [1m10s elapsed][0m[0m
+[0m[1maws_nat_gateway.carsales-nat-gateway-1a: Still creating... [1m10s elapsed][0m[0m
+[0m[1maws_lb.carsales_alb: Still creating... [1m10s elapsed][0m[0m
+[0m[1maws_ecs_service.carsales-dealer-service: Still creating... [1m20s elapsed][0m[0m
+[0m[1maws_ecs_service.carsales-commerical-service: Still creating... [1m20s elapsed][0m[0m
+[0m[1maws_efs_mount_target.ecs_temp_space_az0: Still creating... [1m10s elapsed][0m[0m
+[0m[1maws_efs_mount_target.ecs_temp_space_az1: Still creating... [1m10s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [1m10s elapsed][0m[0m
+[0m[1maws_nat_gateway.carsales-nat-gateway-1b: Still creating... [1m20s elapsed][0m[0m
+[0m[1maws_nat_gateway.carsales-nat-gateway-1a: Still creating... [1m20s elapsed][0m[0m
+[0m[1maws_lb.carsales_alb: Still creating... [1m20s elapsed][0m[0m
+[0m[1maws_ecs_service.carsales-dealer-service: Still creating... [1m30s elapsed][0m[0m
+[0m[1maws_ecs_service.carsales-commerical-service: Still creating... [1m30s elapsed][0m[0m
+[0m[1maws_nat_gateway.carsales-nat-gateway-1a: Creation complete after 1m23s [id=nat-0fa565a4d75b6d38d][0m[0m
+[0m[1maws_route_table.carsales_private_route_table_1a: Creating...[0m[0m
+[0m[1maws_efs_mount_target.ecs_temp_space_az0: Still creating... [1m20s elapsed][0m[0m
+[0m[1maws_efs_mount_target.ecs_temp_space_az1: Still creating... [1m20s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [1m20s elapsed][0m[0m
+[0m[1maws_route_table.carsales_private_route_table_1a: Creation complete after 3s [id=rtb-00fca513a05934746][0m[0m
+[0m[1maws_route_table_association.carsales-1a: Creating...[0m[0m
+[0m[1maws_route_table_association.carsales-1a: Creation complete after 1s [id=rtbassoc-0790365072e84fb11][0m[0m
+[0m[1maws_nat_gateway.carsales-nat-gateway-1b: Still creating... [1m30s elapsed][0m[0m
+[0m[1maws_lb.carsales_alb: Still creating... [1m30s elapsed][0m[0m
+[0m[1maws_ecs_service.carsales-dealer-service: Still creating... [1m40s elapsed][0m[0m
+[0m[1maws_ecs_service.carsales-commerical-service: Still creating... [1m40s elapsed][0m[0m
+[0m[1maws_efs_mount_target.ecs_temp_space_az0: Still creating... [1m30s elapsed][0m[0m
+[0m[1maws_efs_mount_target.ecs_temp_space_az1: Still creating... [1m30s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [1m30s elapsed][0m[0m
+[0m[1maws_efs_mount_target.ecs_temp_space_az0: Creation complete after 1m31s [id=fsmt-bb5e6a82][0m[0m
+[0m[1maws_efs_mount_target.ecs_temp_space_az1: Creation complete after 1m31s [id=fsmt-ba5e6a83][0m[0m
+[0m[1maws_nat_gateway.carsales-nat-gateway-1b: Still creating... [1m40s elapsed][0m[0m
+[0m[1maws_lb.carsales_alb: Still creating... [1m40s elapsed][0m[0m
+[0m[1maws_ecs_service.carsales-dealer-service: Still creating... [1m50s elapsed][0m[0m
+[0m[1maws_ecs_service.carsales-commerical-service: Still creating... [1m50s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [1m40s elapsed][0m[0m
+[0m[1maws_nat_gateway.carsales-nat-gateway-1b: Still creating... [1m50s elapsed][0m[0m
+[0m[1maws_lb.carsales_alb: Still creating... [1m50s elapsed][0m[0m
+[0m[1maws_ecs_service.carsales-dealer-service: Still creating... [2m0s elapsed][0m[0m
+[0m[1maws_ecs_service.carsales-commerical-service: Still creating... [2m0s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [1m50s elapsed][0m[0m
+[0m[1maws_nat_gateway.carsales-nat-gateway-1b: Still creating... [2m0s elapsed][0m[0m
+[0m[1maws_lb.carsales_alb: Still creating... [2m0s elapsed][0m[0m
+[0m[1maws_ecs_service.carsales-dealer-service: Still creating... [2m10s elapsed][0m[0m
+[0m[1maws_ecs_service.carsales-commerical-service: Still creating... [2m10s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [2m0s elapsed][0m[0m
+[0m[1maws_nat_gateway.carsales-nat-gateway-1b: Creation complete after 2m6s [id=nat-02ab22d28b4219068][0m[0m
+[0m[1maws_route_table.carsales_private_route_table_1b: Creating...[0m[0m
+[0m[1maws_route_table.carsales_private_route_table_1b: Creation complete after 3s [id=rtb-0a39d7aace7121ae0][0m[0m
+[0m[1maws_route_table_association.carsales-1b: Creating...[0m[0m
+[0m[1maws_route_table_association.carsales-1b: Creation complete after 0s [id=rtbassoc-0b1b0c84ea38a4ab2][0m[0m
+[0m[1maws_lb.carsales_alb: Still creating... [2m10s elapsed][0m[0m
+[0m[1maws_lb.carsales_alb: Creation complete after 2m10s [id=arn:aws:elasticloadbalancing:ap-southeast-2:207880003428:loadbalancer/app/carsales-app-load-balancer/22656ae58040f805][0m[0m
+[0m[1maws_lb_listener.carsales_http: Creating...[0m[0m
+[0m[1maws_ecs_service.carsales-dealer-service: Still creating... [2m20s elapsed][0m[0m
+[0m[1maws_ecs_service.carsales-commerical-service: Still creating... [2m20s elapsed][0m[0m
+[0m[1maws_lb_listener.carsales_http: Creation complete after 2s [id=arn:aws:elasticloadbalancing:ap-southeast-2:207880003428:listener/app/carsales-app-load-balancer/22656ae58040f805/276e949e01e69247][0m[0m
+[0m[1maws_lb_listener_rule.carsales_test2_http: Creating...[0m[0m
+[0m[1maws_lb_listener_rule.carsales_test1_http: Creating...[0m[0m
+[0m[1maws_lb_listener_rule.carsales_test2_http: Creation complete after 2s [id=arn:aws:elasticloadbalancing:ap-southeast-2:207880003428:listener-rule/app/carsales-app-load-balancer/22656ae58040f805/276e949e01e69247/addb386ff8b7d9ea][0m[0m
+[0m[1maws_lb_listener_rule.carsales_test1_http: Creation complete after 2s [id=arn:aws:elasticloadbalancing:ap-southeast-2:207880003428:listener-rule/app/carsales-app-load-balancer/22656ae58040f805/276e949e01e69247/bf0336453ebeb3d6][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [2m10s elapsed][0m[0m
+[0m[1maws_ecs_service.carsales-commerical-service: Creation complete after 2m30s [id=arn:aws:ecs:ap-southeast-2:207880003428:service/carsales-cluster/carsales-commerical-service][0m[0m
+[0m[1maws_ecs_service.carsales-dealer-service: Creation complete after 2m30s [id=arn:aws:ecs:ap-southeast-2:207880003428:service/carsales-cluster/carsales-dealer-service][0m[0m
+[0m[1maws_appautoscaling_target.carsales-dealer_to_target: Creating...[0m[0m
+[0m[1maws_appautoscaling_target.carsales-dealer_to_target: Creation complete after 1s [id=service/carsales-cluster/carsales-dealer-service][0m[0m
+[0m[1maws_appautoscaling_policy.carsales-dealer_to_target_cpu: Creating...[0m[0m
+[0m[1maws_appautoscaling_policy.carsales-dealer_to_target_memory: Creating...[0m[0m
+[0m[1maws_appautoscaling_policy.carsales-dealer_to_target_memory: Creation complete after 2s [id=carsales-dealer-to-target-memory][0m[0m
+[0m[1maws_appautoscaling_policy.carsales-dealer_to_target_cpu: Creation complete after 2s [id=carsales-dealer-to-target-cpu][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [2m20s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [2m30s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [2m40s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [2m50s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [3m0s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [3m10s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [3m20s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [3m30s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [3m40s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [3m50s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [4m0s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [4m10s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [4m20s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [4m30s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [4m40s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [4m50s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [5m0s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [5m10s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [5m20s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [5m30s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [5m40s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [5m50s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [6m0s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [6m10s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [6m20s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [6m30s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [6m40s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [6m50s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [7m0s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [7m10s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [7m20s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [7m30s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [7m40s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [7m50s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [8m0s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [8m10s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [8m20s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [8m30s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [8m40s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [8m50s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [9m0s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [9m10s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [9m20s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [9m30s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [9m40s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [9m50s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [10m0s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [10m10s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [10m20s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [10m30s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [10m40s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [10m50s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [11m0s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [11m10s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [11m20s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [11m30s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [11m40s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [11m50s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [12m0s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [12m10s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [12m20s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [12m30s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [12m40s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Still creating... [12m50s elapsed][0m[0m
+[0m[1maws_db_instance.carsales-db: Creation complete after 12m54s [id=carsales-database][0m[0m
+[0m[1maws_ssm_parameter.db_host: Creating...[0m[0m
+[0m[1maws_ssm_parameter.db_host: Creation complete after 2s [id=/production/myapp/db-host][0m[0m
+[33m
+[1m[33mWarning: [0m[0m[1mInterpolation-only expressions are deprecated[0m
+
+[0m  on ecs-ec2-service.tf line 68, in resource "aws_autoscaling_policy" "ecs-cluster-scale-out":
+  68:     autoscaling_group_name = [4m"${aws_autoscaling_group.ecs-cluster.name}"[0m
+[0m
+Terraform 0.11 and earlier required all non-constant expressions to be
+provided via interpolation syntax, but this pattern is now deprecated. To
+silence this warning, remove the "${ sequence from the start and the }"
+sequence from the end of this expression, leaving just the inner expression.
+
+Template interpolation syntax is still used to construct strings from
+expressions when the template includes multiple interpolation sequences or a
+mixture of literal strings and interpolations. This deprecation applies only
+to templates that consist entirely of a single interpolation sequence.
+
+(and 10 more similar warnings elsewhere)
+[0m[0m
+[0m[1m[32m
+Apply complete! Resources: 65 added, 0 changed, 0 destroyed.[0m
+Releasing state lock. This may take a few moments...
+[0m[1m[32m
+Outputs:
+
+alb_url_addr = carsales-app-load-balancer-1368359111.ap-southeast-2.elb.amazonaws.com[0m

@@ -27,7 +27,7 @@ resource "aws_security_group" "ecs" {
 
 resource "aws_launch_configuration" "ecs" {
   name                        = "${var.ecs_cluster_name}-cluster"
-  image_id                    =  "ami-02704edb2becb49b9"  
+  image_id                    =  data.aws_ami.aws_optimized_ecs.id 
   #image_id                    = data.aws_ami.ecs.id  aws ssm get-parameters --names /aws/service/ecs/optimized-ami/amazon-linux-2/recommended
   instance_type               = var.instance_type_spot
   spot_price                  = var.spot_bid_price

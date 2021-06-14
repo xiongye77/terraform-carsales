@@ -28,8 +28,8 @@ resource "aws_security_group" "carsales_bastion_sg" {
 # CREATE BASTION HOST IN PUBLIC SUBNET
 
 resource "aws_instance" "carsales_bastion_host-1a" {
-  ami = "ami-0912f71e06545ad88"
-  #ami = data.aws_ami.bastion_host.id   ami-0912f71e06545ad88 https://aws.amazon.com/amazon-linux-ami/
+  #ami = "ami-09b42976632b27e9b" ami-0912f71e06545ad88 https://aws.amazon.com/amazon-linux-ami/
+  ami = data.aws_ami.amazon-linux-2-bastion.id  
   instance_type = "t2.medium"
   key_name = aws_key_pair.carsales_ecs_public_key.key_name
   associate_public_ip_address = true
