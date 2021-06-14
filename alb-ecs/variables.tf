@@ -34,9 +34,9 @@ variable "min_spot_instances" {
     default = 2
 
 }
-
+# Make sure your bid price is enough. 
 variable "spot_bid_price"  {
     default = "0.03"
 
 }
-#please refer  https://aws.amazon.com/ec2/spot/pricing/  
+
