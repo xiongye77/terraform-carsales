@@ -50,7 +50,7 @@ resource "aws_internet_gateway" "carsales-igw" {
 }
   
 
-# CREATE NAT GATEWAY in EU-West-1A
+# CREATE NAT GATEWAY in Region-1A
 
 resource "aws_nat_gateway" "carsales-nat-gateway-1a" {
   allocation_id = aws_eip.carsales-nat1.id
@@ -62,7 +62,7 @@ resource "aws_nat_gateway" "carsales-nat-gateway-1a" {
   }
 }
 
-# CREATE NAT GATEWAY in EU-West-1B
+# CREATE NAT GATEWAY in Region-1B
 
 resource "aws_nat_gateway" "carsales-nat-gateway-1b" {
   allocation_id = aws_eip.carsales-nat2.id
@@ -78,7 +78,7 @@ resource "aws_nat_gateway" "carsales-nat-gateway-1b" {
 resource "aws_subnet" "carsales-public-1a" {
   vpc_id = aws_vpc.carsales_vpc.id
   cidr_block = var.public_1_subnetCIDR
-  availability_zone = "ap-south-1a"
+  availability_zone = "${var.region}a"
   map_public_ip_on_launch = "true"
   tags = {
     Name        = "CarSales Public Subnet - 1A"
@@ -88,7 +88,7 @@ resource "aws_subnet" "carsales-public-1a" {
 resource "aws_subnet" "carsales-public-1b" {
   vpc_id = aws_vpc.carsales_vpc.id
   cidr_block = var.public_2_subnetCIDR
-  availability_zone = "ap-south-1b"
+  availability_zone = "${var.region}b"
   map_public_ip_on_launch = "true"
   tags = {
     Name        = "CarSales Public Subnet - 1B"
@@ -103,7 +103,7 @@ resource "aws_subnet" "carsales-public-1b" {
 resource "aws_subnet" "carsales-private-1a" {
   vpc_id = aws_vpc.carsales_vpc.id
   cidr_block = var.private_1_subnetCIDR
-  availability_zone = "ap-south-1a"
+  availability_zone = "${var.region}a"
   map_public_ip_on_launch = "false"
   tags = {
     Name        = "CarSales Private Subnet - 1A"
@@ -114,14 +114,14 @@ resource "aws_subnet" "carsales-private-1a" {
 resource "aws_subnet" "carsales-private-1b" {
   vpc_id = aws_vpc.carsales_vpc.id
   cidr_block = var.private_2_subnetCIDR
-  availability_zone = "ap-south-1b"
+  availability_zone = "${var.region}b"
   map_public_ip_on_launch = "false"
   tags = {
     Name        = "CarSales Private Subnet - 1B"
     Terraform   = "True"
   }
 }
-# Create first private route table and associate it with private subnet in eu-west-1a
+# Create first private route table and associate it with private subnet in Region-1a
  
 resource "aws_route_table" "carsales_private_route_table_1a" {
     vpc_id = aws_vpc.carsales_vpc.id
@@ -140,7 +140,7 @@ resource "aws_route_table_association" "carsales-1a" {
     route_table_id = aws_route_table.carsales_private_route_table_1a.id
 }
  
-# Create second private route table and associate it with private subnet in eu-west-1b 
+# Create second private route table and associate it with private subnet in Region-1b 
  
 resource "aws_route_table" "carsales_private_route_table_1b" {
     vpc_id = aws_vpc.carsales_vpc.id

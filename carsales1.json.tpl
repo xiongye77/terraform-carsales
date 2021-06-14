@@ -20,8 +20,8 @@
             "readOnly": false
           }
         ],
-    "secrets": [{"name": "db_url","valueFrom": "arn:aws:ssm:ap-south-1:207880003428:parameter/production/myapp/db-host"},
-                     {"name": "DATABASE_PASSWORD", "valueFrom": "arn:aws:ssm:ap-south-1:207880003428:parameter/production/myapp/rds-password"
+    "secrets": [{"name": "db_url","valueFrom": "arn:aws:ssm:ap-south-1:${data.aws_caller_identity.current.account_id}:parameter/production/myapp/db-host"},
+                     {"name": "DATABASE_PASSWORD", "valueFrom": "arn:aws:ssm:ap-south-1:${data.aws_caller_identity.current.account_id}:parameter/production/myapp/rds-password"
     }],
     "environment": [],
     "logConfiguration": {

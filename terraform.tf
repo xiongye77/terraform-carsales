@@ -1,9 +1,9 @@
 terraform {
   backend "s3" {
-    bucket         = "terraform-up-and-running-state-carsales"
+    bucket         = "terraform-up-and-running-state-carsales-code"
     key            = "global/s3/terraform.tfstate"
-    region         = "ap-south-1"   
-    dynamodb_table = "terraform-up-and-running-locks-carsales"
+    region         = "${var.region}"   
+    dynamodb_table = "terraform-up-and-running-locks-carsales-code"
     encrypt        = true
   }
 }

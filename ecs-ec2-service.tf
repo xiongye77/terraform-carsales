@@ -113,15 +113,53 @@ resource "aws_cloudwatch_metric_alarm" "memory-low" {
     }
 }
 
-data "template_file" "carsales1" {
-  template = file("carsales1.json.tpl")
-}
+#data "template_file" "carsales1" {
+#  template = file("carsales1.json.tpl")
+#}
 
 resource "aws_ecs_task_definition" "carsales1" {
   family                = "carsales1"
   execution_role_arn = aws_iam_role.ecs-task-execution-role.arn
   task_role_arn      = aws_iam_role.ecs-demo-task-role.arn
-  container_definitions = data.template_file.carsales1.rendered
+  container_definitions = <<DEFINITION
+  [
+  {
+    "name": "carsales1",
+    "image": "dbaxy770928/carsales1:latest",
+    "essential": true,
+    "cpu": 1,
+    "memory": 256,
+    "links": [],
+    "portMappings": [
+      {
+        "containerPort": 80,
+        "hostPort": 0,
+        "protocol": "tcp"
+      }
+    ],
+    "mountPoints": [
+          {
+            "sourceVolume": "efs-carsales-demo",
+            "containerPath": "/efs",
+            "readOnly": false
+          }
+        ],
+    "secrets": [{"name": "db_url","valueFrom": "arn:aws:ssm:${var.region}:${data.aws_caller_identity.current.account_id}:parameter/production/myapp/db-host"},
+          {"name": "DATABASE_PASSWORD", "valueFrom": "arn:aws:ssm:${var.region}:${data.aws_caller_identity.current.account_id}:parameter/production/myapp/rds-password"
+    }],
+    "environment": [],
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-create-group":"true",
+        "awslogs-group": "carsales1",
+        "awslogs-region": "${var.region}",
+        "awslogs-stream-prefix": "carsales1-log-stream"
+      }
+    }
+  }
+]
+DEFINITION
   volume {
     name = "efs-carsales-demo"
     efs_volume_configuration {
@@ -131,15 +169,53 @@ resource "aws_ecs_task_definition" "carsales1" {
   } 
 }
 
-data "template_file" "carsales2" {
-  template = file("carsales2.json.tpl")
-}
+#data "template_file" "carsales2" {
+#  template = file("carsales2.json.tpl")
+#}
 
 resource "aws_ecs_task_definition" "carsales2" {
   family                = "carsales2"
   execution_role_arn = aws_iam_role.ecs-task-execution-role.arn
   task_role_arn      = aws_iam_role.ecs-task-execution-role.arn
-  container_definitions = data.template_file.carsales2.rendered
+  container_definitions = <<DEFINITION
+[
+  {
+    "name": "carsales2",
+    "image": "dbaxy770928/carsales2:latest",
+    "essential": true,
+    "cpu": 1,
+    "memory": 256,
+    "links": [],
+    "portMappings": [
+      {
+        "containerPort": 80,
+        "hostPort": 0,
+        "protocol": "tcp"
+      }
+    ],
+    "mountPoints": [
+          {
+            "sourceVolume": "efs-carsales-demo",
+            "containerPath": "/efs",
+            "readOnly": false
+          }
+        ],
+    "secrets": [{"name": "db_url","valueFrom": "arn:aws:ssm:${var.region}:${data.aws_caller_identity.current.account_id}:parameter/production/myapp/db-host"},
+                {"name": "DATABASE_PASSWORD", "valueFrom": "arn:aws:ssm:${var.region}:${data.aws_caller_identity.current.account_id}:parameter/production/myapp/rds-password"
+    }],
+    "environment": [],
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-create-group":"true",
+        "awslogs-group": "carsales2",
+        "awslogs-region": "${var.region}",
+        "awslogs-stream-prefix": "carsales-app-log-stream"
+      }
+    }
+  }
+]
+DEFINITION
   volume {
     name = "efs-carsales-demo"
     efs_volume_configuration {

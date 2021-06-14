@@ -76,6 +76,7 @@ resource "aws_ssm_parameter" "rdspassword" {
 }
 data "aws_secretsmanager_secret_version" "creds" {
   # Fill in the name you gave to your secret
+  depends_on = [aws_secretsmanager_secret_version.secretmanager-version]
   secret_id = aws_secretsmanager_secret.RDS-postgres-username.id
 }
 
