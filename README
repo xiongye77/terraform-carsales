@@ -1,0 +1,11 @@
+Before you begin, make sure you configure .aws/config and .aws/credentials file with aws_access_key_id and aws_secret_access_key
+Run aws sts get-caller-identity
+git clone https://github.com/xiongye77/terraform-carsales.git
+cd terraform-carsales
+cd backend
+terraform init
+terraform apply -auto-approve  # this step will create terraform backend S3 backuet and Dynamodb 
+cd ..
+cd alb-ecs
+terraform init  # the default regin is Sydney ap-southeast-2 which defined in variables.tf file, all ami used for EC2/Bastion host are automatically get 
+terraform apply -auto-approve  # this step will create all alb/ec2/ecs/RDS/bastion host/nat gateway/EFS/SSM/Secret manager.... the output will be alb 
