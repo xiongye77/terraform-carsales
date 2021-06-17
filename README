@@ -14,4 +14,7 @@ terraform apply -auto-approve  # this step will create all alb/ec2/ecs/RDS/basti
 check 
 http://ALB_URL/carsales1/
 http://ALB_URL/carsales2/
+
+for my environment use http://myapps-test.aconex.design/  to verify 
+
 Remember to run terraform destroy later it will save your cost.
